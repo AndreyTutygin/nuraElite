@@ -1,0 +1,57 @@
+/* stylelint-disable */
+
+@mixin custom-checkbox {
+    position: relative;
+
+    &__field {
+        appearance: none;
+        position: absolute;
+    }
+
+    &__content {
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            width: 45px;
+            height: 45px;
+            box-sizing: border-box;
+            background: #fff;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 16px;
+            width: 15px;
+            height: 11px;
+            box-sizing: border-box;
+            background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.6515 0.451946C14.1874 -0.0127744 13.4337 -0.0124814 12.969 0.451946L5.3968 8.02444L2.03129 4.65895C1.56656 4.19423 0.813261 4.19423 0.348541 4.65895C-0.11618 5.12367 -0.11618 5.87698 0.348541 6.3417L4.55526 10.5484C4.78747 10.7806 5.09196 10.897 5.39648 10.897C5.701 10.897 6.00579 10.7809 6.238 10.5484L14.6515 2.13466C15.1162 1.67026 15.1162 0.916638 14.6515 0.451946Z' fill='%232BC36F'/%3E%3C/svg%3E");
+            background-position: center;
+            background-size: 15px 11px;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    }
+}
+
+.custom-checkbox__field:checked+.custom-checkbox__content::after {
+    opacity: 1;
+}
+
+.custom-checkbox__field:focus+.custom-checkbox__content::before {
+    outline: auto;
+    outline-offset: 2px;
+}
+
+.custom-checkbox__field:disabled+.custom-checkbox__content {
+    opacity: 0.4;
+    pointer-events: none;
+}

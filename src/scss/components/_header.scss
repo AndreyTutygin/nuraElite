@@ -1,1 +1,163 @@
-.header {}
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+    border: 1px solid $secondColor;
+    border-radius: 3px;
+    padding: 10px 20px;
+    max-width: 261px;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+      background-color: $secondColor;
+    }
+
+    &:active {
+      border-color: $isActiveColor;
+      background-color: $isActiveColor;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__whatsapp-link {
+    &:hover {
+      .header__svg_whatsapp {
+        fill: $secondColor;
+      }
+    }
+
+    &:active {
+      .header__svg_whatsapp {
+        fill: $isActiveColor;
+      }
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__svg {
+    width: 26px;
+    height: 26px;
+    fill: #fff;
+
+    &_whatsapp {
+      transition: fill 0.3s;
+    }
+  }
+
+  &__number {
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  &__nav {
+    margin-top: 16px;
+  }
+}
+
+.logo {
+  &__img {
+    @include mobile {
+      max-width: 70%;
+    }
+  }
+}
+
+.nav {
+  width: 789px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $secondColor;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+
+    &:active {
+      &::after {
+        background-color: $isActiveColor;
+      }
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.burger {
+  --burger-color: #fff;
+  --burger-width: 32px;
+  --burger-height: 22px;
+  --burger-line-height: 3px;
+
+  @include burger;
+
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}

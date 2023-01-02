@@ -1,5 +1,36 @@
 <header class="header">
   <div class="container header__container">
-
+    <picture class="logo header__logo">
+      <source class="logo__src" srcset="@img/logo.webp" type="image/webp">
+      <img class="logo__img" loading="lazy" src="@img/logo.jpg" width="144" height="137" alt="Лого">
+    </picture>
+    <div class="header__info">
+      <div class="header__contacts">
+        <a href="#" class="header__whatsapp-link" aria-label="Ссылка на чат в whatsapp">
+          <svg class="header__svg header__svg_whatsapp">
+            <use xlink:href="img/sprite.svg#whatsapp"></use>
+          </svg>
+        </a>
+        <a href="tel:+77000011888" class="header__phone">
+          <svg class="header__svg">
+            <use xlink:href="img/sprite.svg#phone"></use>
+          </svg>
+          <span class="header__number">+7 700 001 18 88</span>
+        </a>
+      </div>
+      <nav class="nav header__nav">
+        <ul class="list-reset nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">О проекте</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Локация</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Преимущества</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Почему мы?</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Способы оплаты</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>

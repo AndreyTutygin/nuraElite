@@ -1,0 +1,94 @@
+.cottages {
+  padding: 40px 0 100px;
+  background: rgb(132 34 49 / 5%);
+
+  &__container {
+    position: relative;
+  }
+
+  &__slider {
+    margin-top: 30px;
+  }
+
+  &__slider-btns {
+    position: relative;
+
+    @include big-desktop {
+      position: absolute;
+      right: 100px;
+      top: 0;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__slider-dots {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: $mainColor;
+}
+
+.slider-slide {
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.btn-arrow {
+  position: absolute;
+  top: 209px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: $mainColor;
+
+  &__svg {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+  }
+
+  &_next {
+    right: -89px;
+
+    @include big-desktop {
+      right: 0;
+    }
+  }
+
+  &_prev {
+    left: -89px;
+    line-height: 0;
+    transform: rotate(180deg);
+
+    @include big-desktop {
+      left: auto;
+      right: 60px;
+    }
+  }
+
+  @include big-desktop {
+    top: 0;
+  }
+}

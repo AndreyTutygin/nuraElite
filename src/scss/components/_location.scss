@@ -1,0 +1,51 @@
+.location {
+  padding: 69px 0 100px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__txt {
+    max-width: 480px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__parag {
+    font-weight: 300;
+    font-size: 20px;
+
+    &:nth-child(2) {
+      margin-top: 50px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+
+      &:nth-child(2) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__picture {
+    margin-left: 118px;
+
+    @include tablet {
+      margin-top: 50px;
+      margin-left: 0;
+    }
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+}

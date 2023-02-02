@@ -1,0 +1,40 @@
+.payment {
+  padding: 60px 0;
+
+  &__section-title {
+    &>h2 {
+      text-align: center;
+    }
+
+    &>span {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 40px;
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+}
+
+.payment-item {
+  max-width: 215px;
+  text-align: center;
+
+  &__title {
+    font-weight: 700;
+    font-size: 17px;
+  }
+}

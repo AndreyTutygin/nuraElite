@@ -1,0 +1,44 @@
+.technologies {
+  padding: 60px 0;
+
+  &__section-title {
+    &>h2 {
+      text-align: center;
+    }
+
+    &>span {
+      left: -190px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 150px;
+    gap: 50px;
+
+    @include mobile {
+      margin-top: 50px;
+    }
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+}
+
+.technologies-item {
+  max-width: 500px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__parag {
+    font-weight: 300;
+    font-size: 18px;
+  }
+}

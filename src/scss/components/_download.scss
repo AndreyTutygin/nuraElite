@@ -1,0 +1,88 @@
+.download {
+  padding: 60px 0;
+
+  &__border {
+    border: 8px solid $mainColor;
+    border-radius: 8px;
+    padding: 70px 15px;
+    text-align: center;
+
+    @include mobile {
+      padding: 30px 15px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    color: #2e363e;
+
+    @include mobile {
+      font-size: 28px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 21px;
+    color: #2e363e;
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+}
+
+.form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 40px;
+
+  &__input {
+    border-radius: 8px;
+    padding: 0 20px;
+    width: 280px;
+    height: 85px;
+    font-size: 15px;
+    background: #f2f6fa;
+
+    @include mobile {
+      width: 230px;
+      height: 60px;
+    }
+  }
+
+  &__btn {
+    border-radius: 8px;
+    width: 280px;
+    height: 86px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    background: $mainColor;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+      background: darken($mainColor, 4%);
+    }
+
+    &:active {
+      background: darken($mainColor, 6%);
+    }
+
+    @include mobile {
+      width: 230px;
+      height: 60px;
+    }
+  }
+
+  @include mobile {
+    gap: 20px;
+  }
+}

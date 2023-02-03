@@ -1,1 +1,37 @@
-.footer {}
+.footer {
+  padding: 20px 0;
+  text-align: center;
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    font-weight: 300;
+    font-size: 20px;
+    transition: color 0.2 ease-in-out;
+
+    &:hover {
+      color: $mainColor;
+    }
+
+    &:active {
+      color: darken($mainColor, 10%);
+    }
+  }
+
+  &__copy {
+    margin: 20px 0 0;
+    font-weight: 300;
+    font-size: 20px;
+    color: $mainColor;
+  }
+}
